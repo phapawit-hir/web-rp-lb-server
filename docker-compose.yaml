@@ -1,0 +1,18 @@
+version: '2.0'
+services: 
+    web:
+        image: ${nginx_image}:${nginx_image_tag}
+        container_name: web
+        restart: unless-stopped
+        ports: 
+        - "80:80"
+        - "443:443"
+        volumes:
+          - weblog:/log
+        networks:
+          - web
+
+networks:
+   web:
+volumes:
+  weblog:
