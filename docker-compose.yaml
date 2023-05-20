@@ -6,13 +6,24 @@ services:
         restart: unless-stopped
         ports: 
         - "80:80"
-        - "443:443"
         volumes:
           - weblog:/log
+          - ./web_server/html:/usr/share/nginx/html:ro
+          # - ./web_server/certbot:/var/www/certbot/:ro
+          - ./web_server/config:/etc/nginx/:ro
         networks:
-          - web
-
+          - webnetwork
+    # certbot:
+    #     image: ${certbot_image}:${certbot_image_tag}
+    #     container_name: certbot
+    #     volumes:
+    #        - ./web_server/certbot:/var/www/certbot/:rw
+    #     networks:
+    #        - webnetwork
+    #     depends_on:
+    #        - web
+        
 networks:
-   web:
+   webnetwork:
 volumes:
   weblog:
