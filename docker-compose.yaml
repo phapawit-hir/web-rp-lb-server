@@ -4,8 +4,8 @@ services:
         image: ${nginx_image}:${nginx_image_tag}
         container_name: web
         restart: unless-stopped
-        ports: 
-        - "80:80"
+          #ports: 
+          #        - "80"
         volumes:
           - weblog:/log
           - ./web_server/html:/usr/share/nginx/html:ro
@@ -13,6 +13,7 @@ services:
           - ./web_server/config:/etc/nginx/:ro
         networks:
           - webnetwork
+          - rpnetwork
     # certbot:
     #     image: ${certbot_image}:${certbot_image_tag}
     #     container_name: certbot
@@ -25,5 +26,7 @@ services:
         
 networks:
    webnetwork:
+   rpnetwork:
+       external: true
 volumes:
   weblog:
