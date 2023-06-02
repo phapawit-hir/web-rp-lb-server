@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sql postgres</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <button type="button" class="back-button"><a href="../index.html"> * - * - * - * - * - * - * - * - * - * - Back * - * - * - * - * - * - * - * - * - * -  </a> </button>
+    <h1> sql postgres </h1>
+    <hr />
+    <h2> Search which role can access schema </h2>
+    <p>FROM information_schema.role_table_grants WHERE table_schema='public';</p>
+    <hr />
+    <h2>Grant and Revoke which role can access DB</h2> 
+    <p>GRANT CONNECT ON DATABASE nova TO user;</p>
+    <p class="warning">REVOKE CONNECT ON DATABASE nova FROM public;</p>
+    <hr />
+    <h2>Grant and Revoke which role can access SCHEMA</h2>
+    <p class="warning">REVOKE ALL ON SCHEMA public FROM public;</p>
+    <p>GRANT USAGE ON SCHEMA public TO user;</p>
+    <hr />
+    <h2>Grant and Revoke which role can access TABLES</h2>
+    <p>GRANT SELECT ON ALL TABLES IN SCHEMA public TO read_only ;</p>
+    <p>GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO read_write ;</p>
+    <p>GRANT ALL ON ALL TABLES IN SCHEMA public TO admin ;</p>
+    <p class="warning">REVOKE ALL ON ALL TABLES IN SCHEMA public FROM admin ;</p>
+    <hr />
+</body>
+</html>
+
+
+
