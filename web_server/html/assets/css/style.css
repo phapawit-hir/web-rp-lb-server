@@ -7,3 +7,27 @@ body {
     font-style: Tahoma ;
     font-size: 20px;
 }
+
+p {
+    margin: 0;
+}
+
+.dog {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.warning {
+    color: red;
+}
+
+.back-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+}
