@@ -8,14 +8,25 @@
 
 </head>
 <body>
+    <button type="button" class="back-button"><a href="../index.html"> * - * - * - * - * - * - * - * - * - * - Back * - * - * - * - * - * - * - * - * - * -  </a> </button>
+    <div class="docker-command">
     <h1>Docker Command</h1>
-    <p>docker rm -f `docker ps -aq`</p>
+    <p class="warning">docker rm -f `docker ps -aq`</p>
     <p>docker ps -f "status=exited"</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+    </div>
+    <div class="docker-run">
+        <h1>Docker run</h1>
+        <div class="run postgres">
+            <h2>Postgres</h2>
+            <p>docker run -d --name postgres \ </p>
+            <p>-v ./data/postgres:/var/lib/postgresql/data \</p>
+            <p>-e POSTGRES_USER= \</p>
+            <p>-e POSTGRES_PASSWORD= \</p>
+            <p>-e POSTGRES_DB= \</p>
+            <p>--network \</p>
+            <p>-p 5432:5432 \ </p>
+            <p>postgres:latest</p>
+        </div>
+    </div>
 </body>
 </html>
