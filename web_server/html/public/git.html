@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git page</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <button type="button" class="back-button"><a href="../index.html"> * - * - * - * - * - * - * - * - * - * - Back * - * - * - * - * - * - * - * - * - * -  </a> </button>
+    <h2>git Command</h2>
+    <p>git clone https://whatever.git</p>
+    <p>git add [. or file]</p>
+    <p>git status</p>
+    <p>git branch</p>
+    <p>git checkout</p>
+    <p>git checkout -b "yourname/newbranch"</p>
+    <p class="warning" >git reset ^head</p>
+    <hr />
+    <h2>Conventional Commit</h2>
+    <h3>Type</h3>
+    <ul>
+        <li>API relevant changes
+            <ul>
+                <li>feat: Commits, that adds a new feature</li>
+                <li>fix: Commits, that fixes a bug</li>
+            </ul>
+        </li>
+        <li>refactor: Commits, that rewrite/restructure your code, however does not change any behaviour
+            <ul>
+                <li>perf: Commits are special refactor commits, that improve performance</li>
+            </ul>
+        </li>
+        <li>style: Commits, that do not affect the meaning (white-space, formatting, missing semi-colons, etc)</li>
+        <li>test: Commits, that add missing tests or correcting existing tests</li>
+        <li>docs: Commits, that affect documentation only</li>
+        <li>build: Commits, that affect build components like build tool, ci pipeline, dependencies, project version, ..</li>
+        <li>ops: Commits, that affect operational components like infrastructure, deployment, backup, recovery, ...</li>
+        <li>chore: Miscellaneous commits e.g. modifying .gitignore</li>
+    </ul>
+    <hr />
+</body>
+</html>
